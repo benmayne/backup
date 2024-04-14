@@ -10,6 +10,4 @@ RUN apt-get update -y \
 
 ADD *.sh /scripts/
 
-RUN /scripts/setup.sh
-
-CMD cron && tail -f /var/log/cron.log
+CMD /scripts/start.sh

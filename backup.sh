@@ -1,4 +1,6 @@
 #!/usr/bin/env bash
 set -euxo pipefail
 
-echo "executing backup.sh"
+# flock for duration
+
+echo "$(date) executing backup.sh"
