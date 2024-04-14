@@ -6,7 +6,11 @@ RUN apt-get update -y \
   apt-utils \
   rclone \ 
   rsync \ 
-  cron
+  cron \ 
+  ca-certificates \ 
+  && update-ca-certificates
+
+RUN mkdir -p /backup
 
 ADD *.sh /scripts/
 
