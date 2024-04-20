@@ -7,7 +7,7 @@ echo "executing start.sh"
 printenv | grep "BKP_" >> /etc/environment
 
 # Set up rclone config
-rclone config create $BKP_RCLONE_CONFIG_ARGS
+# usually in /root/.config/rclone/
 echo $(cat $(rclone config file | tail -n 1))
 
 echo 'running backup once'
