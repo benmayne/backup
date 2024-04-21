@@ -6,10 +6,6 @@ echo "executing start.sh"
 # https://stackoverflow.com/questions/27771781/how-can-i-access-docker-set-environment-variables-from-a-cron-job
 printenv | grep "BKP_" >> /etc/environment
 
-# Set up rclone config
-# usually in /root/.config/rclone/
-echo $(cat $(rclone config file | tail -n 1))
-
 echo 'running backup once'
 /scripts/backup.sh
 
