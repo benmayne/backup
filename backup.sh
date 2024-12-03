@@ -5,6 +5,6 @@ set -euxo pipefail
 
 echo "$(date) executing backup.sh"
 
-rclone sync --log-level INFO --log-file /config/log.log --progress --track-renames --config /config/rclone.conf $BKP_LOCAL_PATH $BKP_REMOTE_PATH
+rclone sync --log-level INFO --log-file /config/log.log --progress --fast-list --track-renames --config /config/rclone.conf $BKP_LOCAL_PATH $BKP_REMOTE_PATH
 
 echo "$(date) done"
