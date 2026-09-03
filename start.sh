@@ -10,7 +10,7 @@ echo 'running backup once'
 /scripts/backup.sh
 
 # set up cron schedule
-echo "$BKP_CRON_SCHEDULE /bin/bash /scripts/backup.sh >> /var/log/cron.log 2>&1" >> /etc/cron.d/backup-cron
+echo "$BKP_CRON_SCHEDULE /bin/bash /scripts/backup.sh >> /var/log/cron.log 2>&1" > /etc/cron.d/backup-cron
 crontab /etc/cron.d/backup-cron
 touch /var/log/cron.log
 
